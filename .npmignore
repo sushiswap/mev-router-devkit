@@ -1,0 +1,11 @@
+# -*- mode: gitignore; -*-
+.github/
+api/
+goerli-devnet/
+docs/
+cache/
+coverage/
+docker-compose.yml
+Dockerfile
+scripts/
+bin/

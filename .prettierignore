@@ -1,0 +1,10 @@
+*.html
+*.css
+*.svg
+*.xml
+*.scss
+*.min.js
+dist/
+.cache/
+build/
+*.json
