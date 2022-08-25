@@ -1,0 +1,56 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "lib": [
+      "esnext"
+    ],
+    "outDir": "./build",
+    "forceConsistentCasingInFileNames": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "strictNullChecks": true,
+    "isolatedModules": false,
+    "removeComments": true,
+    "incremental": true,
+    "moduleResolution": "Node",
+    "moduleDetection": "auto",
+    "types": [
+      "@types/node"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/",
+    "src/**/*.test.ts",
+    "__test__/**/*"
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "src"
+    ],
+    "out": "docs",
+    "exclude": "src/constants/*",
+    "hideLegend": true,
+    "hideGenerator": true,
+    "includeVersion": true
+  }
+}
