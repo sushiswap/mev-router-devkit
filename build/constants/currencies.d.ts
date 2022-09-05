@@ -1,0 +1,52 @@
+import { Currency, Token } from '../model';
+export declare const Ether: Currency;
+export declare const Wbtc: Token;
+export declare const Usdc: Token;
+export declare const Usdt: Token;
+export declare const Dai: Token;
+export declare const Weth: Token;
+export declare const Link: Token;
+export declare const Crv: Token;
+export declare const Cvx: Token;
+export declare const Sushi: Token;
+export declare const MAINNET_CURRENCIES: Currency[];
+export declare const GoerliEther: Currency;
+export declare const GoerliWeth: Token;
+export declare const GoerliWrappedBitcoin: Token;
+export declare const GoerliUSDCoin: Token;
+export declare const GoerliTetherUSD: Token;
+export declare const GoerliDai: Token;
+export declare const GoerliLink: Token;
+export declare const GoerliCrv: Token;
+export declare const GoerliCvx: Token;
+export declare const GoerliSushi: Token;
+export declare const GOERLI_CURRENCIES: Currency[];
+export declare const GanacheEther: Currency;
+export declare const GanacheWeth: Token;
+export declare const GanacheWrappedBitcoin: Token;
+export declare const GanacheUSDCoin: Token;
+export declare const GanacheTetherUSD: Token;
+export declare const GanacheDai: Token;
+export declare const GanacheLink: Token;
+export declare const GanacheCrv: Token;
+export declare const GANACHE_CURRENCIES: Currency[];
+export declare const CURRENCIES: {
+    1: Currency[];
+    5: Currency[];
+    1337: Currency[];
+};
+export declare const TOKENS: {
+    1: Token[];
+    5: Token[];
+    1337: Token[];
+};
+export declare const NATIVE_CURRENCY: {
+    1: Currency;
+    5: Currency;
+    1337: Currency;
+};
+export declare const WRAPPED_ETHER: {
+    1: Token;
+    5: Token;
+    1337: Token;
+};

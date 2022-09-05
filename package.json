@@ -4,6 +4,9 @@
   "description": "OpenMEV SushiswapV01 Router DevKit",
   "type": "module",
   "source": "src/index.ts",
+  "browser": {
+    "ws": "./dist/npm/client/WSWrapper.js"
+  },
   "exports": {
     "require": "./dist/index.cjs",
     "default": "./dist/index.modern.js"
@@ -12,7 +15,7 @@
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "files": [
-    "dist",
+    "dist/*",
     "src",
     "types"
   ],
@@ -60,7 +63,8 @@
     "ethers": "^5.7.0",
     "jsbi": "^4.3.0",
     "node-cache": "^5.1.2",
-    "tiny-invariant": "^1.2.0"
+    "tiny-invariant": "^1.2.0",
+    "ws": "^8.8.1"
   },
   "devDependencies": {
     "@swc-node/core": "^1.9.0",

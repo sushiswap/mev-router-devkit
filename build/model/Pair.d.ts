@@ -1,0 +1,55 @@
+import { BigNumber } from 'ethers';
+import { Currency } from './Currency';
+import { CurrencyValue } from './CurrencyValue';
+import { TokenPrice } from './TokenPrice';
+import { PairState } from './PairState';
+export declare class Pair {
+    readonly address: string;
+    private first;
+    private second;
+    private state;
+    private inverted;
+    private oracle;
+    constructor(address: string, first: Currency, second: Currency, state: PairState);
+    getSwapInput(output: CurrencyValue): CurrencyValue | undefined;
+    getSwapOutput(input: CurrencyValue): CurrencyValue | undefined;
+    getEstimatedSwapFee(input: BigNumber): BigNumber;
+    isEmpty(): boolean;
+    getFirstReserve(): CurrencyValue;
+    getSecondReserve(): CurrencyValue;
+    getDepositReservesFraction(firstTokenPrice?: TokenPrice, secondTokenPrice?: TokenPrice): BigNumber | undefined;
+    getToken0Symbol(): string;
+    getToken1Symbol(): string;
+    getToken0Address(): string;
+    getToken1Address(): string;
+    getTotalSupply(): BigNumber;
+    getChainId(): import("../constants").ChainId | undefined;
+    getFirstLiquidityIn(secondLiquidityIn: CurrencyValue): CurrencyValue | undefined;
+    getSecondLiquidityIn(firstLiquidityIn: CurrencyValue): CurrencyValue | undefined;
+    getLiquidity(firstValue: CurrencyValue, secondValue: CurrencyValue, proportional: boolean): {
+        swapDepositFirstAmount: CurrencyValue;
+        swapDepositSecondAmount: CurrencyValue;
+        liquidity: BigNumber;
+    };
+    getBurnOutput(liquidity: BigNumber): {
+        first: CurrencyValue;
+        second: CurrencyValue;
+    };
+    getInitialRatio(): BigNumber;
+    getPrice(): BigNumber;
+    getSwapFee(): BigNumber;
+    getBurnFee(): BigNumber;
+    getMintFee(): BigNumber;
+    private getSwapAmount0In;
+    private getSwapAmount1In;
+    private getSwapAmount0Out;
+    private getSwapAmount1Out;
+    private getRawLiquidity;
+    private getExtraLiquidity;
+    private getRatio;
+    private initialDeposit;
+    private swapDeposit0;
+    private swapDeposit1;
+    private getDepositAmount0In;
+    private getDepositAmount1In;
+}
